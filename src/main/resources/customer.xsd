@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            xmlns:tns="http://billcom.com/webservice"
+            targetNamespace="http://billcom.com/webservice">
+
+    <xsd:element name="CustomerInfoRequest">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="id" type="xsd:long"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="CustomerInfoResponse">
+        <xsd:complexType>
+            <xsd:sequence>
+                <!-- Define the elements in the response -->
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+</xsd:schema>
