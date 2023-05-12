@@ -1,7 +1,6 @@
 package com.billcom.webservice.controller;
 
 import java.util.List;
-import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -39,9 +38,13 @@ public class CustomerController {
 	public CustomerDTO getContractsByCustomerId(@PathVariable("id") Long id){
 		return customerService.getContractsByCustomerId(id);
 	}
-	  @GetMapping(value = "/soap/{id}", produces = "application/xml")
-	    public CustomerInfoDTO findContactByIdSOAP(@PathVariable("id") Long id) {
-	       return customerSoapService.findContactByIdSOAP(id);
-	  }
+	@GetMapping(value = "/soap/info/{id}", produces = "application/xml")
+	  public CustomerInfoDTO findContactByIdSOAP(@PathVariable("id") Long id) {
+	  return customerSoapService.findContactByIdSOAP(id);
+  }
+	@GetMapping(value = "/soap/contracts/{id}", produces = "application/xml")
+	  public CustomerDTO getContractsByIdSOAP(@PathVariable("id") Long id) {
+	  return customerSoapService.getContractsByIdSOAP(id);
+}
 
 }

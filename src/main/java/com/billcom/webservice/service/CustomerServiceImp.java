@@ -3,6 +3,7 @@ package com.billcom.webservice.service;
 import java.util.List;
 import java.util.Optional;
 
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -19,7 +20,7 @@ import java.util.ArrayList;
 public class CustomerServiceImp implements CustomerService {
 	@Autowired 
 	private CustomerRepository customerRepository  ;
-	
+    
 	public CustomerInfoDTO findContactById(Long id) {
 	    Optional<Customer> customerOptional = customerRepository.findInfoById(id);
 	    if (customerOptional.isPresent()) {
@@ -56,7 +57,6 @@ public class CustomerServiceImp implements CustomerService {
 		            contractDTOs.add(contractDTO);
 
 		        }
-		        
 		        customerDTO.setContracts(contractDTOs);
 		        return customerDTO;
 		    }

@@ -10,9 +10,8 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.*;
+
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -30,6 +29,7 @@ public class RatePlan {
 	 private Long id;
 	 @Column(name = "DES")
 	 private String Description ;
+	 
      @OneToMany(mappedBy = "ratePlan", fetch = FetchType.EAGER, cascade = CascadeType.ALL)
 	 @JsonProperty(access=JsonProperty.Access.WRITE_ONLY)
 	 private List<Contract> contracts;

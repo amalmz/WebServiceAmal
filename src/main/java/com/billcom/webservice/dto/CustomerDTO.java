@@ -1,9 +1,7 @@
 package com.billcom.webservice.dto;
 
 import java.util.List;
-import java.util.Set;
 
-import com.billcom.webservice.model.Contract;
 
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;

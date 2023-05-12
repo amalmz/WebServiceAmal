@@ -1,7 +1,6 @@
 package com.billcom.webservice.service;
 
 import java.util.List;
-import java.util.Optional;
 
 import com.billcom.webservice.dto.CustomerDTO;
 import com.billcom.webservice.dto.CustomerInfoDTO;
